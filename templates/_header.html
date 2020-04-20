@@ -1,0 +1,64 @@
+  {% block header %}
+   <header id="header2" class="header header-2 header-full">
+      <div class="header__topbar">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-9 col-lg-10">
+              <ul class="contact__list list-unstyled">
+                <li><i class="icon-map-pin"></i>16 J. Tongogara Ave, Cnr Harare St, Harare</li>
+                <li><i class="icon-phone"></i>+263.8644218702</li>
+                <li><i class="icon-document"></i>harareoncology@gmail.com</li>
+              </ul>
+            </div>
+            <div class="col-sm-4 col-md-3 col-lg-2">
+              <div class="social__icons justify-content-end">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-feed"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="/">
+            <img src="{{ get_url(path="assets/images/logo/logo-light.png") }}" class="logo-light" alt="logo">
+            <img src="{{ get_url(path="assets/images/logo/logo-dark.png") }}" class="logo-dark" alt="logo">
+          </a>
+          <button class="navbar-toggler" type="button">
+            <span class="menu-lines"><span></span></span>
+          </button>
+		  {% block nav %}
+          <div class="collapse navbar-collapse" id="mainNavigation">
+            <ul class="navbar-nav mr-auto ml-auto">
+				<li class="nav__item">
+					<a href="/" data-toggle="dropdown" class=" nav__item-link ">Home</a>
+				</li>
+				<li class="nav__item">
+					<a href="about" data-toggle="dropdown" class=" nav__item-link ">About Us</a>
+				</li>
+				<li class="nav__item">
+					<a href="/services" data-toggle="dropdown" class=" nav__item-link ">Services</a>
+				</li>
+				<li class="nav__item">
+					<a href="/products" data-toggle="dropdown" class=" nav__item-link ">Products</a>
+				</li>
+				<li class="nav__item">
+					<a href="/csr" data-toggle="dropdown" class=" nav__item-link ">CSR</a>
+				</li>
+            </ul>
+          </div>
+		  {% endblock nav %}
+          <div class="navbar-modules">
+            <div class="modules__wrapper d-flex align-items-center">
+              <a href="/contact" class="module__btn module__btn-contact">Contact</a>
+              <a href="#" class="module__btn module__btn-search"><i class="york-search"></i></a>
+              <a href="#" class="module__btn module__btn-sidenav"><i class="york-menu"></i></a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+{% endblock header %}

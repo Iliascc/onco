@@ -1,0 +1,319 @@
+{% extends "base.html" %}
+
+{% block body %}
+<body>
+  <div class="wrapper">
+	{% block header %}	 
+   <header id="header2" class="header header-2 header-full">
+      <div class="header__topbar">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-9 col-lg-10">
+              <ul class="contact__list list-unstyled">
+                <li><i class="icon-map-pin"></i>16 J. Tongogara Ave, Cnr Harare St, Harare</li>
+                <li><i class="icon-phone"></i>+263.8644218702</li>
+                <li><i class="icon-document"></i>harareoncology@gmail.com</li>
+              </ul>
+            </div>
+            <div class="col-sm-4 col-md-3 col-lg-2">
+              <div class="social__icons justify-content-end">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-feed"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="/">
+            <img src="{{ get_url(path="assets/images/logo/logo-light.png") }}" class="logo-light" alt="logo">
+            <img src="{{ get_url(path="assets/images/logo/logo-dark.png") }}" class="logo-dark" alt="logo">
+          </a>
+          <button class="navbar-toggler" type="button">
+            <span class="menu-lines"><span></span></span>
+          </button>
+	  		  {% block nav %}
+          <div class="collapse navbar-collapse" id="mainNavigation">
+            <ul class="navbar-nav mr-auto ml-auto">
+				<li class="nav__item">
+					<a href="/" class=" nav__item-link ">Home</a>
+				</li>
+				<li class="nav__item">
+					<a href="/about" class=" nav__item-link ">About Us</a>
+				</li>
+				<li class="nav__item">
+					<a href="/services" class=" nav__item-link ">Services</a>
+				</li>
+				<li class="nav__item">
+					<a href="/products" class=" nav__item-link ">Products</a>
+				</li>
+				<li class="nav__item">
+					<a href="/csr" class=" nav__item-link active">CSR</a>
+				</li>
+				<li class="nav__item">
+					<a href="/terms" class=" nav__item-link">Terms</a>
+				</li>
+            </ul>
+          </div>
+		  {% endblock nav %}
+	          <div class="navbar-modules">
+            <div class="modules__wrapper d-flex align-items-center">
+              <a href="/contact" class="module__btn module__btn-contact">Contact</a>
+              <a href="#" class="module__btn module__btn-search"><i class="york-search"></i></a>
+              <a href="#" class="module__btn module__btn-sidenav"><i class="york-menu"></i></a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+	{% endblock header %}
+
+    <section id="page-title" class="page-title page-title-layout2 text-center bg-overlay bg-overlay-2">
+      <div class="bg-img"><img src="{{ get_url(path="assets/images/slider/1.jpg") }}" alt="background"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12">
+            <span class="pagetitle__subheading">{{ page.description }}</span>
+            <h1 class="pagetitle__heading">{{ page.title }}</h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb justify-content-center">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item"><a href="{{ page.permalink}}">{{ page.title }}</a></li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="fancyboxLayout1" class="fancybox-layout1 text-center pt-100">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+            <div class="heading heading-3 mb-60">
+              <h2 class="heading__title">Best Business Solutions </h2>
+              <p class="heading__desc">We are York, our strategists will help you set an objective and choose your
+                tools, developing a plan that is custom-built for your business. </p>
+              <div class="divider__line"></div>
+            </div>
+          </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+        <div class="row mb-80 mb-30-xs mb-30-sm">
+          <!-- fancybox item #1 -->
+          <div class="col-sm-12 col-md-4 col-lg-4">
+            <div class="fancybox-item">
+              <div class="fancybox__icon">
+                <i class="icon-desktop"></i>
+              </div><!-- /.fancybox-icon -->
+              <div class="fancybox__content">
+                <h4 class="fancybox__title">Development</h4>
+                <p class="fancybox__desc">The development of your next business plan will be executed by a brilliant
+                  team who will indicate your grand success.</p>
+                <div class="dotted__line"><span></span></div>
+              </div><!-- /.fancybox-content -->
+            </div><!-- /.fancybox-item -->
+          </div><!-- /.col-lg-4 -->
+          <!-- fancybox item #2 -->
+          <div class="col-sm-12 col-md-4 col-lg-4">
+            <div class="fancybox-item">
+              <div class="fancybox__icon">
+                <i class="icon-layers"></i>
+              </div><!-- /.fancybox-icon -->
+              <div class="fancybox__content">
+                <h4 class="fancybox__title">Web Design</h4>
+                <p class="fancybox__desc">What separates York agency from all other web design agencies is the ability
+                  to offer the most User Friendly Experience.</p>
+                <div class="dotted__line"><span></span></div>
+              </div><!-- /.fancybox-content -->
+            </div><!-- /.fancybox-item -->
+          </div><!-- /.col-lg-4 -->
+          <!-- fancybox item #3 -->
+          <div class="col-sm-12 col-md-4 col-lg-4">
+            <div class="fancybox-item">
+              <div class="fancybox__icon">
+                <i class="icon-strategy"></i>
+              </div><!-- /.fancybox-icon -->
+              <div class="fancybox__content">
+                <h4 class="fancybox__title">Brand Identity</h4>
+                <p class="fancybox__desc">Your logo is the very heart of identity, let our designers deliver the perfect
+                  dreamy design for your new business identity.</p>
+                <div class="dotted__line"><span></span></div>
+              </div><!-- /.fancybox-content -->
+            </div><!-- /.fancybox-item -->
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+        <div class="row">
+          <!-- fancybox item #4 -->
+          <div class="col-sm-12 col-md-4 col-lg-4">
+            <div class="fancybox-item">
+              <div class="fancybox__icon">
+                <i class="icon-video"></i>
+              </div><!-- /.fancybox-icon -->
+              <div class="fancybox__content">
+                <h4 class="fancybox__title">Photography</h4>
+                <p class="fancybox__desc">Photography is the core of everything we do, photography equipment, camera and
+                  reviews, photography articles.</p>
+                <div class="dotted__line"><span></span></div>
+              </div><!-- /.fancybox-content -->
+            </div><!-- /.fancybox-item -->
+          </div><!-- /.col-lg-4 -->
+          <!-- fancybox item #5 -->
+          <div class="col-sm-12 col-md-4 col-lg-4">
+            <div class="fancybox-item">
+              <div class="fancybox__icon">
+                <i class="icon-layers"></i>
+              </div><!-- /.fancybox-icon -->
+              <div class="fancybox__content">
+                <h4 class="fancybox__title">Graphic Design</h4>
+                <p class="fancybox__desc">What separates York agency from all other web design agencies is the ability
+                  to offer the most User Friendly Experience.</p>
+                <div class="dotted__line"><span></span></div>
+              </div><!-- /.fancybox-content -->
+            </div><!-- /.fancybox-item -->
+          </div><!-- /.col-lg-4 -->
+          <!-- fancybox item #6 -->
+          <div class="col-sm-12 col-md-4 col-lg-4">
+            <div class="fancybox-item">
+              <div class="fancybox__icon">
+                <i class="icon-mobile"></i>
+              </div><!-- /.fancybox-icon -->
+              <div class="fancybox__content">
+                <h4 class="fancybox__title">Mobile Apps</h4>
+                <p class="fancybox__desc">Increase social reach and productivity with our Awesome App Directory, with a
+                  big collection of famous applications..</p>
+                <div class="dotted__line"><span></span></div>
+              </div><!-- /.fancybox-content -->
+            </div><!-- /.fancybox-item -->
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /. fancybox layout 1 -->
+		<!-- ==========================
+		   Work process 
+		============================ -->
+		<section id="work-Process" class="work-Process p-0">
+		  <div class="container-fluid col-padding-0">
+			<div class="row">
+			  <!-- process item #1 -->
+			  <div class="col-sm-6 col-md-6 col-lg-3">
+				<div class="process-item bg-gray equal-height">
+				  <span class="process__number">01.</span>
+				  <h5 class="process__title">Brainstorming</h5>
+				  <p class="process__desc">The first step is to take all the portfolio’s data & start thinking about it!
+					Once
+					you create, gather, or start manipulating data and files, they can quickly become disorganised.</p>
+				  <div class="dotted__line"><span></span></div>
+				</div><!-- /.process-item -->
+			  </div><!-- /.col-lg-3 -->
+			  <!-- process item #2 -->
+			  <div class="col-sm-6 col-md-6 col-lg-3">
+				<div class="process-item equal-height">
+				  <span class="process__number">02.</span>
+				  <h5 class="process__title">Prototype</h5>
+				  <p class="process__desc">To know everything about the product, customers & the competitors. Once you
+					create, gather, or start manipulating data and files, they can quickly become</p>
+				  <div class="dotted__line"><span></span></div>
+				</div><!-- /.process-item -->
+			  </div><!-- /.col-lg-3 -->
+			  <!-- process item #3 -->
+			  <div class="col-sm-6 col-md-6 col-lg-3">
+				<div class="process-item bg-theme equal-height">
+				  <span class="process__number color-white">03.</span>
+				  <h5 class="process__title color-white">Design</h5>
+				  <p class="process__desc color-white">Start to work on the design taking in mind all the data you have
+					collected. Once you create, gather, or start manipulating data and files, they can quickly become </p>
+				  <div class="dotted__line dotted__white"><span></span></div>
+				</div><!-- /.process-item -->
+			  </div><!-- /.col-lg-3 -->
+			  <!-- process item #4 -->
+			  <div class="col-sm-6 col-md-6 col-lg-3">
+				<div class="process-item bg-heading equal-height">
+				  <span class="process__number color-white">04.</span>
+				  <h5 class="process__title color-white">Evaluation</h5>
+				  <p class="process__desc color-white">Reach a conclusion from the investigations about the product you work
+					on. Once you create, gather, or start manipulating data and files, they can quickly become </p>
+				  <div class="dotted__line dotted__white"><span></span></div>
+				</div><!-- /.process-item -->
+			  </div><!-- /.col-lg-3 -->
+			</div><!-- /.row -->
+		  </div><!-- /.container -->
+		</section><!-- /.work-Process -->
+		 <!-- ==========================
+			   Contact 2
+			============================ -->
+			<section id="contact2" class="contact-2 pb-80">
+			  <div class="container">
+				<div class="row">
+				  <!-- Contact panel #1 -->
+				  <div class="col-sm-6 col-md-6 col-lg-3">
+					<div class="contact-panel">
+					  <h4 class="contact__panel-title">New York Office</h4>
+					  <p class="contact__panel-desc">We are York, our strategists will help you set an objective and choose
+						your tools, developing a plan for your business.</p>
+					  <ul class="contact__list list-unstyled">
+						<li><i class="icon-phone"></i>002 010123456789</li>
+						<li><i class="icon-document"></i>yorks@7oroof.com</li>
+						<li><i class="icon-map-pin"></i>22 Albahr St, Tanta, Egypt</li>
+					  </ul>
+					  <a href="#" class="btn btn__link">Read More</a>
+					</div><!-- /.contact-panel -->
+				  </div><!-- /.col-lg-3 -->
+				  <!-- Contact panel #2 -->
+				  <div class="col-sm-6 col-md-6 col-lg-3">
+					<div class="contact-panel">
+					  <h4 class="contact__panel-title">London Office</h4>
+					  <p class="contact__panel-desc">We are York, our strategists will help you set an objective and choose
+						your tools, developing a plan for your business.</p>
+					  <ul class="contact__list list-unstyled">
+						<li><i class="icon-phone"></i>002 010123456789</li>
+						<li><i class="icon-document"></i>yorks@7oroof.com</li>
+						<li><i class="icon-map-pin"></i>22 Albahr St, Tanta, Egypt</li>
+					  </ul>
+					  <a href="#" class="btn btn__link">Read More</a>
+					</div><!-- /.contact-panel -->
+				  </div><!-- /.col-lg-3 -->
+				  <!-- Contact panel #3 -->
+				  <div class="col-sm-6 col-md-6 col-lg-3">
+					<div class="contact-panel">
+					  <h4 class="contact__panel-title">Amsterdam Office</h4>
+					  <p class="contact__panel-desc">We are York, our strategists will help you set an objective and choose
+						your tools, developing a plan for your business.</p>
+					  <ul class="contact__list list-unstyled">
+						<li><i class="icon-phone"></i>002 010123456789</li>
+						<li><i class="icon-document"></i>yorks@7oroof.com</li>
+						<li><i class="icon-map-pin"></i>22 Albahr St, Tanta, Egypt</li>
+					  </ul>
+					  <a href="#" class="btn btn__link">Read More</a>
+					</div><!-- /.contact-panel -->
+				  </div><!-- /.col-lg-3 -->
+				  <!-- Contact panel #4 -->
+				  <div class="col-sm-6 col-md-6 col-lg-3">
+					<div class="contact-panel">
+					  <h4 class="contact__panel-title">Tokyo Office</h4>
+					  <p class="contact__panel-desc">We are York, our strategists will help you set an objective and choose
+						your tools, developing a plan for your business.</p>
+					  <ul class="contact__list list-unstyled">
+						<li><i class="icon-phone"></i>002 010123456789</li>
+						<li><i class="icon-document"></i>yorks@7oroof.com</li>
+						<li><i class="icon-map-pin"></i>22 Albahr St, Tanta, Egypt</li>
+					  </ul>
+					  <a href="#" class="btn btn__link">Read More</a>
+					</div><!-- /.contact-panel -->
+				  </div><!-- /.col-lg-3 -->
+				</div><!-- /.row -->
+			  </div><!-- /.container -->
+			</section><!-- /. Contact 2 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.pricing1 -->
+	{% include "_footer1.html" %}
+    <button id="scrollTopBtn"><i class="arrow_up"></i></button>
+	{% include "_module__search.html" %}
+	{% include "_module__sidenav.html" %}
+  </div>
+	{% include "_scripts.html" %}
+</body>
+{% endblock body %}
